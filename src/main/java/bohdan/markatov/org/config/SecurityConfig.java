@@ -30,14 +30,14 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .cors(withDefaults())
+                .cors(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
                         auth -> auth.requestMatchers("/api/auth/oauth2-login"))
                 .oauth2Login(withDefaults());
         http.authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/login",
-                                "api/auth/confirm-email",
-                                "api/auth/registration",
+                                "/api/auth/confirm-email",
+                                "/api/auth/registration",
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**")
                         .permitAll()

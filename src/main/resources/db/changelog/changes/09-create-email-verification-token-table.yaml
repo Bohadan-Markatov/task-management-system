@@ -24,7 +24,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: expiryDate
+                  name: expiry_date
                   type: TIMESTAMP
                   constraints:
                     nullable: false
