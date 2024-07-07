@@ -19,17 +19,17 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: dropboxFileId
+                  name: dropbox_file_id
                   type: VARCHAR(255)
                   constraints:
                     nullable: false
               - column:
-                  name: fileName
+                  name: file_name
                   type: VARCHAR(255)
                   constraints:
                     nullable: false
               - column:
-                  name: uploadDate
+                  name: upload_date
                   type: TIMESTAMP
                   constraints:
                     nullable: false
