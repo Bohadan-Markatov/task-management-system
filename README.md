@@ -11,7 +11,7 @@ The Task Management App is a backend application designed for team-based task ma
 
 Users can update task statuses, add comments, and upload attachments. Security is ensured through JWT tokens, adhering
 to best practices in REST API design. The backend is built with Spring Boot 3 and Spring Security 6.
-##Technologies Used
+## Technologies Used
 * Spring Boot 3
 * Spring Security 6
 * JWT Token Authentication
