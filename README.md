@@ -22,3 +22,4 @@ to best practices in REST API design. The backend is built with Spring Boot 3 an
 * Docker
 * Google API
 * Dropbox API
+## Class diagram
