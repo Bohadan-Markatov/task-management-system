@@ -18,6 +18,7 @@ to best practices in REST API design. The backend is built with Spring Boot 3 an
 * Spring Data JPA
 * JSR-303 and Spring Validation
 * OpenAPI and Swagger UI Documentation
+* Liquibase: Manages database migrations
 * Docker
 * Google API
 * Dropbox API
