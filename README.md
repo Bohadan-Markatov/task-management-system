@@ -48,6 +48,9 @@ private Date calculateExpiryDate() {
 }
 ```
 ## OAuth2
+You can also log in to the app using OAuth2 authentication by Google. Simply paste this URL into your browser where you have a Google account: http://localhost:8080/api/auth/oauth2-login. You will be redirected to Google's service where you should confirm that you want to log in to this app using your Google account.
+
+In the service layer of the application, it will receive a JSON response from Google with your credentials and check if an account with that email already exists in the database. If it does, a new account will not be created; instead, a JWT token for the existing account will be returned. If the account does not exist, a new account will be created using the credentials from the JSON response from Google, and a JWT token for the new account will be returned. The password for the new account will be set to null, but this is secure because validation is used on the login endpoint, ensuring that nobody can use null as a value for the password field. 
 ## Dropbox
 ## Installation
 ## Contacts
