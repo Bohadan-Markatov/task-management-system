@@ -98,7 +98,7 @@ This is necessary because the Dropbox API no longer supports long-lived access t
 ## Installation
 You can install and run this application in different ways. Here are three methods.
 ### Doker
-1. Create a new file named .env in the root directory of this project. Copy all data from this file and paste it into the new .env file.
+1. Create a new file named .env in the root directory of this project. Copy all data from this [file](https://drive.google.com/file/d/1BMgBb2hqjRVglaZo6E9Ob4sNM-SuGKB8/view?usp=sharing) and paste it into the new .env file.
 2. Open a terminal, navigate to the root of the project, and run the following commands:
 ```
 mvn clean package
@@ -110,11 +110,11 @@ WARNING: If you run this app more than once with Docker, please drop all tables 
 ### Locally Installed Database
 By default, the application.properties file is configured for a MySQL database. If you are using PostgreSQL, you only need to change the driver (dependencies for PostgreSQL are already added to the project). Follow these steps:
 1. Fill in all empty fields related to the database in the application.properties file.
-2. Fill in the remaining empty fields using data from this file.
+2. Fill in the remaining empty fields using data from this [file](https://drive.google.com/file/d/1BMgBb2hqjRVglaZo6E9Ob4sNM-SuGKB8/view?usp=sharing).
 3. Run the app.
 ### H2 Database
 1. Delete all fields in application.properties marked for deletion when using the H2 database.
 2. Uncomment all fields marked for uncommenting when using the H2 database.
-3. Fill in the remaining empty fields using data from this file.
+3. Fill in the remaining empty fields using data from this [file](https://drive.google.com/file/d/1BMgBb2hqjRVglaZo6E9Ob4sNM-SuGKB8/view?usp=sharing).
 4. Run the app.
 ## Contacts
