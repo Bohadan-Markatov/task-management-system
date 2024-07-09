@@ -118,3 +118,6 @@ By default, the application.properties file is configured for a MySQL database. 
 3. Fill in the remaining empty fields using data from this [file](https://drive.google.com/file/d/1BMgBb2hqjRVglaZo6E9Ob4sNM-SuGKB8/view?usp=sharing).
 4. Run the app.
 ## Contacts
+### Phone number: +380972935098
+### Email: markatovbohdan@gmail.com
+### [LinkedIn](www.linkedin.com/in/bohdan-markatov)
