@@ -26,6 +26,27 @@ to best practices in REST API design. The backend is built with Spring Boot 3 an
 ## Class diagram
 ![](assets/images/Tables.png)
 ## Registration
+To register, send a POST request with the following JSON body:
+```
+{
+  "email": "youremail@gmail.com",
+  "password": "yourpassword",
+  "repeatPassword": "yourpassword",
+  "firstname": "Your name",
+  "lastname": "Your lastname"
+}
+```
+Afterward, check your email for a confirmation message from taskmanagement.springapp@gmail.com and click the confirmation button. If the token is valid and not expired (it expires in 60 minutes), your account will be enabled. You can then log in using your email and password. You will receive a JWT token in the response, which you can use to access secured endpoints.
+
+The token expiry time is currently set to 60 minutes. You can change this value in the EmailVerificationToken class in the method calculateExpiryDate() located at src/main/java/bohdan/markatov/org/model/EmailVerificationToken:
+```
+private Date calculateExpiryDate() {
+    Calendar calendar = Calendar.getInstance();
+    calendar.setTime(new Timestamp(calendar.getTime().getTime()));
+    calendar.add(Calendar.MINUTE, 60);
+    return new Date(calendar.getTime().getTime());
+}
+```
 ## OAuth2
 ## Dropbox
 ## Installation
