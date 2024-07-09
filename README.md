@@ -26,7 +26,7 @@ to best practices in REST API design. The backend is built with Spring Boot 3 an
 ## Class diagram
 ![](assets/images/Tables.png)
 ## Registration
-To register, send a POST request with the following JSON body:
+To register, send a POST request to http://localhost:8080/api/auth/registration with the following JSON body:
 ```
 {
   "email": "youremail@gmail.com",
