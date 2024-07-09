@@ -1,5 +1,16 @@
 # Task management system
 ## Table of content
+1. [Overview](#overview)
+2. [Technologies Used](#technologies-used)
+3. [Class Diagram](#class-diagram)
+4. [Registration](#registration)
+5. [OAuth2](#oauth2)
+6. [Dropbox](#dropbox)
+7. [Installation](#installation)
+    * [Docker](#docker)
+    * [Locally Installed Database](#locally-installed-database)
+    * [H2 Database](#h2-database)
+8. [Contacts](#contacts)
 ## Overview
 The Task Management App is a backend application designed for team-based task management. Key features include:
 * User registration with email confirmation
