@@ -121,3 +121,4 @@ By default, the application.properties file is configured for a MySQL database. 
 ### Phone number: +380 97 293 50 98
 ### Email: markatovbohdan@gmail.com
 ### [LinkedIn](https://www.linkedin.com/in/bohdan-markatov)
+### [Telegram](https://t.me/BogdanMarkatov)
