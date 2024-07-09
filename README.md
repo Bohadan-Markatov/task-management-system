@@ -108,7 +108,7 @@ private String uploadFile(String filePath, Long taskId, int attempt) {
 This is necessary because the Dropbox API no longer supports long-lived access tokens. You can only get a short-lived access token that lasts 4 hours. As a result, the code catches InvalidAccessTokenException, attempts to refresh the DropboxClient which contains the access token, and then calls the method again.
 ## Installation
 You can install and run this application in different ways. Here are three methods.
-### Doker
+### Docker
 1. Create a new file named .env in the root directory of this project. Copy all data from this [file](https://drive.google.com/file/d/1BMgBb2hqjRVglaZo6E9Ob4sNM-SuGKB8/view?usp=sharing) and paste it into the new .env file.
 2. Open a terminal, navigate to the root of the project, and run the following commands:
 ```
