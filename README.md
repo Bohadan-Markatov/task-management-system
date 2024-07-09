@@ -36,7 +36,7 @@ To register, send a POST request with the following JSON body:
   "lastname": "Your lastname"
 }
 ```
-Afterward, check your email for a confirmation message from taskmanagement.springapp@gmail.com and click the confirmation button. If the token is valid and not expired (it expires in 60 minutes), your account will be enabled. You can then log in using your email and password. You will receive a JWT token in the response, which you can use to access secured endpoints.
+Afterward, check your email for a confirmation message from taskmanagement.springapp@gmail.com and click the confirmation button. If the token is valid and not expired (it expires in 60 minutes), your account will be enabled. If the confirmation token expired, you will be sent a new confirmation email. You can then log in using your email and password. You will receive a JWT token in the response, which you can use to access secured endpoints.
 
 The token expiry time is currently set to 60 minutes. You can change this value in the EmailVerificationToken class in the method calculateExpiryDate() located at src/main/java/bohdan/markatov/org/model/EmailVerificationToken:
 ```
