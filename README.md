@@ -52,5 +52,49 @@ You can also log in to the app using OAuth2 authentication by Google. Simply pas
 
 In the service layer of the application, it will receive a JSON response from Google with your credentials and check if an account with that email already exists in the database. If it does, a new account will not be created; instead, a JWT token for the existing account will be returned. If the account does not exist, a new account will be created using the credentials from the JSON response from Google, and a JWT token for the new account will be returned. The password for the new account will be set to null, but this is secure because validation is used on the login endpoint, ensuring that nobody can use null as a value for the password field. 
 ## Dropbox
+In this app, you can easily attach a file to your task. Simply send a POST request to http://localhost:8080/api/attachments/task/{taskId}, where {taskId} is the ID of an existing task assigned to you or a task in a project you manage. In the request body, include the path to an existing file on your machine that you want to attach to the task (you can use a file with any extension). The JSON should look like this: 
+```
+{
+  "filePath": "C:\\Users\\user\\folder\\folder\\file.txt"
+}
+```
+Also, use the JWT token you received upon login or through the OAuth2 endpoint (Auth Type - Bearer Token). After sending this request, your file will be saved in Dropbox.
+
+In real web applications, files should be uploaded on the frontend and sent to the backend, as well as OAuth2 authentication where user credentials from Google are sent to the backend. However, since the frontend of this application is still in development, this functionality is handled on the backend.
+
+You can get all attachments by task ID by sending a GET request to http://localhost:8080/api/attachments/task/{taskId}, using your JWT token. The response will be a list of AttachmentResponseDto objects that look like this:
+```
+{
+  "id": 1,
+  "taskId": 1,
+  "taskName": "Task",
+  "fileName": "example.txt",
+  "filePublicLink": "http://example.com/file/example.txt",
+  "uploadDate": "2024-07-09T12:34:56.789"
+}
+```
+If you follow the filePublicLink in your browser, the file you uploaded to Dropbox will automatically be downloaded.
+
+Also, if you look at the source code of DropboxService, you'll notice that the methods are nested and use recursion. It looks like this:
+```
+public String uploadFile(String filePath, Long taskId) {
+    return uploadFile(filePath, taskId, 0);
+}
+
+private String uploadFile(String filePath, Long taskId, int attempt) {
+    try (InputStream in = new FileInputStream(filePath)) {
+        // implementation here...
+    } catch (InvalidAccessTokenException e) {
+        if (attempt > MAX_ATTEMPTS) {
+            throw new RuntimeException("Can't upload file");
+        }
+        client = refreshClient();
+        return uploadFile(filePath, taskId, attempt + 1);
+    } catch (Exception e) {
+        throw new RuntimeException("Can't upload file");
+    }
+}
+```
+This is necessary because the Dropbox API no longer supports long-lived access tokens. You can only get a short-lived access token that lasts 4 hours. As a result, the code catches InvalidAccessTokenException, attempts to refresh the DropboxClient which contains the access token, and then calls the method again.
 ## Installation
 ## Contacts
