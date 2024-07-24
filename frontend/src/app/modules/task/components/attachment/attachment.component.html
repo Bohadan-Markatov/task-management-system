@@ -1,0 +1,10 @@
+<div class="container-fluid attachment" style="display: flex; align-items: flex-start;">
+  <div class="attachment-body" style="flex-grow: 1;">
+    <button class="btn go-by-link" (click)="goByLink()" style="display: block; text-align: left;">
+      {{ attachment.fileName }}
+    </button>
+  </div>
+  <button class="btn btn-delete" type="button" (click)="delete()" style="align-self: flex-start;">
+    <i class="fas fa-times"></i>
+  </button>
+</div>

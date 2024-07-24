@@ -1,0 +1,65 @@
+.status-column {
+  padding: 7px;
+  border-radius: 1rem;
+  min-height: 750px;
+  overflow-y: auto;
+}
+
+.title-box {
+  font-style: italic;
+}
+
+.not-started {
+  background-color: #202020;
+  border: 1px solid rgba(192, 192, 192, 0.5);
+}
+
+.in-progress {
+  background-color: #202020;
+  border: 1px solid rgba(192, 192, 192, 0.5);
+}
+
+.completed {
+  background-color: #202020;
+  border: 1px solid rgba(192, 192, 192, 0.5);
+}
+
+.task-list .row {
+  display: flex;
+}
+
+.task-list {
+  margin-top: 55px;
+}
+
+.task-list .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  color: #C0C0C0;
+}
+
+.task-list {
+  color: #C0C0C0 !important;
+  padding: 5px;
+}
+
+.title-box {
+  padding: 0.1rem;
+  border: none;
+  margin-bottom: 0.15rem;
+}
+
+.custom-hr {
+  margin: 5px;
+  border: 5px;
+  border-top: 1px solid #ccc;
+}
+
+.row.custom-row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.custom-column {
+  padding: 0 5px;
+}
