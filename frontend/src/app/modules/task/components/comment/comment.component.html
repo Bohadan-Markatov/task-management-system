@@ -1,0 +1,14 @@
+<div class="container-fluid comment-container">
+  <div class="comment-header">
+    <span class="author">{{ comment.author?.firstname }} {{ comment.author?.lastname }} ({{ comment.author?.email }})</span>
+  </div>
+  <hr style="margin: 10px 0;">
+  <div class="comment-body">
+    <p>{{ comment.text }}</p>
+  </div>
+  <hr style="margin: 10px 0;">
+  <div class="comment-footer">
+    <span *ngIf="comment.changed">(edited)</span>
+    <span>{{ comment.publicationDate }}</span>
+  </div>
+</div>

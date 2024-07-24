@@ -1,0 +1,15 @@
+<div class="container-fluid project-list">
+  <div class="row">
+    <div *ngFor="let a of projects" class="col-md-4">
+      <app-projects [project]="a" (projectDeleted)="onProjectDelete($event)"></app-projects>
+    </div>
+  </div>
+</div>
+<button class="create-project-btn" (click)="createProject()">
+  <i class="fas fa-plus"></i>
+</button>
+
+
+<!--<div>-->
+<!--  <app-create-project (projectAdded)="onProjectAdded($event)"></app-create-project>-->
+<!--</div>-->

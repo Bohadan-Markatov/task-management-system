@@ -1,0 +1,36 @@
+<div class="container-fluid card task-card">
+  <div class="card-body">
+    <strong>Name:</strong> {{ task.name }} <br>
+    <strong>Description:</strong> {{ task.description }} <br>
+    <strong>Status:</strong>
+    <select [(ngModel)]="task.status" (change)="onStatusChange(($event))" name="status">
+      <option *ngFor="let status of statusOptions" [value]="status">{{ status }}</option>
+    </select><br>
+    <strong>Priority:</strong> {{ task.priority }} <br>
+    <strong>Deadline:</strong> {{ task.deadline }} <br>
+    <strong>Project:</strong>
+    <button class="btn btn-project" (click)="openProjectDetailsModal()">
+      {{ task.project?.name }}
+    </button>
+  </div>
+  <button class="btn btn-delete" type="button" (click)="delete()">
+    <i class="fas fa-times"></i>
+  </button>
+  <div class="alert alert-danger" style="max-height: 75px; padding: 5px" role="alert" *ngIf="errorMsg.length">
+    <p *ngFor="let msg of errorMsg" style="margin: 0">{{msg}}</p>
+  </div>
+  <div class="status-column not-started flex-grow-1" style="margin-top: -15px;">
+      <div *ngFor="let a of attachments">
+        <app-attachment [attachment]="a" (attachmentDeleted)="onAttachmentDeleted($event)"></app-attachment>
+      </div>
+  </div>
+  <div style="display: flex; align-items: center; width: 100%;">
+    <input type="file" (change)="onFileSelected($event)" hidden #fileInput>
+    <button class="btn btn-upload" type="button" (click)="fileInput.click()" style="flex: 1; margin-right: 1px;">
+      <i class="fa-solid fa-upload"></i>
+    </button>
+    <button class="btn btn-comment" (click)="openCommentDetailsModal()" style="flex: 1; margin-left: 1px;">
+      <i class="fa-solid far fa-comment-alt"></i>
+    </button>
+  </div>
+</div>
