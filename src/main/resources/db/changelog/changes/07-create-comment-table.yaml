@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-project-table
+      author: Bohdan
+      changes:
+        - createTable:
+            tableName: comments
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: text
+                  type: VARCHAR(500)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: task_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: publication_date
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_changed
+                  type: bit
+
+        - addForeignKeyConstraint:
+            baseTableName: comments
+            baseColumnNames: author_id
+            constraintName: FK_comments_author
+            referencedTableName: users
+            referencedColumnNames: id
+
+        - addForeignKeyConstraint:
+            baseTableName: comments
+            baseColumnNames: task_id
+            constraintName: FK_comments_task
+            referencedTableName: tasks
+            referencedColumnNames: id

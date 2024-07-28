@@ -1,0 +1,15 @@
+<div class="container-fluid card team-member" style="display: flex; align-items: flex-start">
+  <div class="body" style="display: flex; align-items: center; width: 100%">
+    <strong class="name" style="display: block; text-align: left; margin-right: auto;">
+      {{ user.firstname }} {{ user.lastname }} ({{ user.email }})
+    </strong>
+    <button class="btn btn-add" type="button" (click)="addTask()"
+            style="border-radius: 1rem; border: none; padding: 3px;">
+      <i class="fas fa-plus"></i>
+    </button>
+    <button class="btn btn-delete" type="button" (click)="delete()"
+            style="border-radius: 1rem; border: none; padding: 3px; margin-left: 8px;">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
