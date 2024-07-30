@@ -51,14 +51,11 @@ while the frontend is developed using Angular with Bootstrap for styling.
 3. Copy all data from this [file](https://drive.google.com/file/d/1BMgBb2hqjRVglaZo6E9Ob4sNM-SuGKB8/view?usp=sharing) and paste it into the new `.env` file.
 4. Open a terminal, navigate to the root of the project, and run the following commands:
 ```
-# This command will compile the project
 mvn clean package
-# This command will generate two images: one for the backend and one for the database, and run them
 docker-compose up --build
 ```
 5. Once the backend and database are up and running, open a new terminal window, navigate to the root of the project, then to the folder named `frontend`, and run the following command:
 ```
-# This command will generate an image for the frontend and run it
 docker-compose up --build
 ```
 6. Once the frontend container is launched, the application will be available in your browser on port 80.
