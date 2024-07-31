@@ -10,5 +10,5 @@ public interface AuthenticationService {
 
     void saveConfirmationTokenAndSendEmail(User user);
 
-    void confirmVerificationToken(String token);
+    String confirmVerificationToken(String token);
 }

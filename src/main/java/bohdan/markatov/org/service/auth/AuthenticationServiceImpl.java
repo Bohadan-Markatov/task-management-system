@@ -2,7 +2,6 @@ package bohdan.markatov.org.service.auth;
 
 import bohdan.markatov.org.dto.user.UserLoginRequestDto;
 import bohdan.markatov.org.dto.user.UserLoginResponseDto;
-import bohdan.markatov.org.exception.EntityNotFoundException;
 import bohdan.markatov.org.model.EmailVerificationToken;
 import bohdan.markatov.org.model.User;
 import bohdan.markatov.org.repository.VerificationTokenRepository;
@@ -13,6 +12,7 @@ import jakarta.mail.internet.MimeMessage;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -59,16 +59,18 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public void confirmVerificationToken(String token) {
-        EmailVerificationToken verificationToken
-                = verificationTokenRepository.findByToken(token).orElseThrow(
-                        () -> new EntityNotFoundException("Invalid verification token"));
-        if ((verificationToken.getExpiryDate().getTime() - System.currentTimeMillis()) <= 0) {
-            saveConfirmationTokenAndSendEmail(verificationToken.getUser());
-            throw new RuntimeException("Token has expired,"
-                    + " a new token has been sent to your email");
+    public String confirmVerificationToken(String token) {
+        Optional<EmailVerificationToken> verificationToken
+                = verificationTokenRepository.findByToken(token);
+        if (verificationToken.isEmpty()) {
+            return "invalid_token";
         }
-        userService.enableUserAccount(verificationToken.getUser());
+        if ((verificationToken.get().getExpiryDate().getTime() - System.currentTimeMillis()) <= 0) {
+            saveConfirmationTokenAndSendEmail(verificationToken.get().getUser());
+            return "token_expired";
+        }
+        userService.enableUserAccount(verificationToken.get().getUser());
+        return "successful_confirmation";
     }
 
     private MimeMessage createConfirmationMessage(String recipientEmail, String token) {

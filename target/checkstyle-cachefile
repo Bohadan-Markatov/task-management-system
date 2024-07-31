@@ -1,10 +1,10 @@
-#Wed Jul 31 12:52:57 EEST 2024
+#Thu Aug 01 01:51:28 EEST 2024
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\TaskManagementApplication.java=1722419421100
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\config\\ApplicationContextHolder.java=1722419421101
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\config\\MapperConfig.java=1722419421101
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\config\\SecurityConfig.java=1722419421101
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\controller\\AttachmentController.java=1722419421102
-C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\controller\\AuthenticationController.java=1722419421103
+C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\controller\\AuthenticationController.java=1722466176114
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\controller\\CommentController.java=1722419421103
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\controller\\ProjectController.java=1722419421103
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\controller\\TaskController.java=1722419421104
@@ -51,8 +51,8 @@ C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\security\\RegistrationListener.java=1722419421126
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\attachment\\AttachmentService.java=1722419421126
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\attachment\\AttachmentServiceImpl.java=1722419421127
-C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\auth\\AuthenticationService.java=1722419421128
-C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\auth\\AuthenticationServiceImpl.java=1722419421128
+C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\auth\\AuthenticationService.java=1722466176121
+C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\auth\\AuthenticationServiceImpl.java=1722466272734
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\comment\\CommentService.java=1722419421129
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\comment\\CommentServiceImpl.java=1722419421129
 C\:\\Users\\javat\\IdeaProjects\\tm-system-spring-boot-angular\\src\\main\\java\\bohdan\\markatov\\org\\service\\dropbox\\DropboxService.java=1722419421129

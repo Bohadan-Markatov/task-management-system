@@ -55,7 +55,7 @@ public class AuthenticationController {
 
     @GetMapping("/confirm-email")
     public String confirmEmail(@RequestParam("token") @NotNull String token) {
-        authenticationService.confirmVerificationToken(token);
-        return templateEngine.process("confirmation", new Context());
+        return templateEngine.process(authenticationService.confirmVerificationToken(token),
+                new Context());
     }
 }
