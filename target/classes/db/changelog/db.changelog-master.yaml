@@ -19,3 +19,5 @@ databaseChangeLog:
       file: db/changelog/changes/09-create-email-verification-token-table.yaml
   - include:
       file: db/changelog/changes/10-insert-roles.yaml
+  - include:
+      file: db/changelog/changes/11-insert-users.yaml
