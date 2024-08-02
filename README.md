@@ -5,9 +5,8 @@
 3. [Technologies Used](#technologies-used)
     * [Backend](#backend)
     * [Frontend](#frontend)
-4. [Visual Overview](#visual-overview)
-5. [Installation](#installation)
-6. [Contacts](#contacts)
+4. [Installation](#installation)
+5. [Contacts](#contacts)
 ## Overview
 Task Management System is a full-stack application that enables users to manage their tasks while working in a team effectively.
 It offers features such as user registration with secure email validation, project management (including project creation,
@@ -42,8 +41,6 @@ while the frontend is developed using Angular with Bootstrap for styling.
 * Authentication Guard
 * OpenAPI Generator for Angular
 * Bootstrap
-## Visual Overview
-[![Watch on Loom](https://img.shields.io/badge/Watch%20on-Loom-00a4d9)](https://www.loom.com/share/)
 ## Installation
 ### With Docker
 1. Download this project.
