@@ -23,6 +23,10 @@ export class TaskListComponent implements OnInit {
     this.taskResponse = this.taskResponse.filter(a => a.id !== taskId)
   }
 
+  onProjectQuit(projectId: number) {
+    this.taskResponse = this.taskResponse.filter(task => task.project?.id !== projectId)
+  }
+
   private findAllTasks() {
     this.taskService.getByResponsible().subscribe({
       next: (tasks) => {

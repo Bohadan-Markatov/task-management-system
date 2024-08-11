@@ -29,6 +29,7 @@ export class TaskCardComponent implements OnInit {
   @Input() task!: TaskResponseDto;
   @Output() statusUpdated: EventEmitter<TaskResponseDto> = new EventEmitter<TaskResponseDto>();
   @Output() taskDeleted = new EventEmitter<number>();
+  @Output() quitProject = new EventEmitter<number>();
 
   onStatusChange(event: Event) {
     const selectedValue = (event.target as HTMLSelectElement).value as 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETED';
@@ -62,6 +63,9 @@ export class TaskCardComponent implements OnInit {
     const modalRef = this.modalService.open(TaskProjectComponent,
       { size: 'lg', windowClass: 'custom-modal-class' });
     modalRef.componentInstance.project = this.task.project;
+    modalRef.componentInstance.projectQuit.subscribe((projectId: number) => {
+      this.quitProject.emit(projectId);
+    });
   }
 
   openCommentDetailsModal() {

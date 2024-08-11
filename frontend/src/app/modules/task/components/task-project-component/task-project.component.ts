@@ -18,6 +18,7 @@ import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
 })
 export class TaskProjectComponent {
   @Input() project!: ProjectResponseDto;
+  @Output() projectQuit = new EventEmitter<number>();
 
   constructor(private projectService: ProjectControllerService, public activeModal: NgbActiveModal) {
   }
@@ -30,6 +31,9 @@ export class TaskProjectComponent {
     const params: QuitProject$Params = {
       projectId: this.project.id as number
     }
-    this.projectService.quitProject(params).subscribe();
+    this.projectService.quitProject(params).subscribe(() => {
+      this.projectQuit.emit(this.project.id)
+      this.closeProject()
+    });
   }
 }
