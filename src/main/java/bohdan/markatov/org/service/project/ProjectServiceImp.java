@@ -1,5 +1,7 @@
 package bohdan.markatov.org.service.project;
 
+import bohdan.markatov.org.dto.notification.Notification;
+import bohdan.markatov.org.dto.notification.NotificationStatus;
 import bohdan.markatov.org.dto.project.CreateProjectRequestDto;
 import bohdan.markatov.org.dto.project.ProjectResponseDto;
 import bohdan.markatov.org.dto.user.UserResponseDto;
@@ -10,6 +12,7 @@ import bohdan.markatov.org.mapper.UserMapper;
 import bohdan.markatov.org.model.Project;
 import bohdan.markatov.org.model.User;
 import bohdan.markatov.org.repository.ProjectRepository;
+import bohdan.markatov.org.service.notification.NotificationService;
 import bohdan.markatov.org.service.task.TaskService;
 import bohdan.markatov.org.service.user.UserService;
 import java.util.List;
@@ -23,6 +26,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ProjectServiceImp implements ProjectService {
+    private final NotificationService notificationService;
     private final ProjectRepository projectRepository;
     private final ProjectMapper projectMapper;
     private final UserService userService;
@@ -73,6 +77,10 @@ public class ProjectServiceImp implements ProjectService {
         teamMembers.add(teamMember);
         project.setTeamMembers(teamMembers);
         projectRepository.save(project);
+        notificationService.sendNotification(teamMemberEmail, Notification.builder()
+                .message("You have been added to the " + project.getName() + " project.")
+                .status(NotificationStatus.ADDED)
+                .build());
         return userMapper.toDto(teamMember);
     }
 
@@ -94,6 +102,10 @@ public class ProjectServiceImp implements ProjectService {
         teamMembers.remove(teamMember);
         project.setTeamMembers(teamMembers);
         projectRepository.save(project);
+        notificationService.sendNotification(teamMember.getEmail(), Notification.builder()
+                .message("You have been removed from the " + project.getName() + " project.")
+                .status(NotificationStatus.DELETED)
+                .build());
         taskService.deleteAllByUserAndProject(teamMember, project);
     }
 
@@ -108,6 +120,13 @@ public class ProjectServiceImp implements ProjectService {
         teamMembers.remove(teamMember);
         taskService.deleteAllByUserAndProject(teamMember, project);
         project.setTeamMembers(teamMembers);
+        notificationService.sendNotification(project.getManager().getEmail(), Notification.builder()
+                .message("Participant "
+                        + teamMember.getFirstname()
+                        + " " + teamMember.getLastname()
+                        + " left the project")
+                .status(NotificationStatus.DELETED)
+                .build());
         projectRepository.save(project);
     }
 

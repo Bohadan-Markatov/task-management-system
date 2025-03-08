@@ -5,6 +5,7 @@ import bohdan.markatov.org.dto.project.CreateProjectRequestDto;
 import bohdan.markatov.org.dto.project.ProjectResponseDto;
 import bohdan.markatov.org.dto.user.UserResponseDto;
 import bohdan.markatov.org.model.User;
+import bohdan.markatov.org.service.notification.NotificationService;
 import bohdan.markatov.org.service.project.ProjectService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -28,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class ProjectController {
     private final ProjectService projectService;
+    private final NotificationService notificationService;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

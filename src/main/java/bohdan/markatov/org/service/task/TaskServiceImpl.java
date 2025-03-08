@@ -1,5 +1,7 @@
 package bohdan.markatov.org.service.task;
 
+import bohdan.markatov.org.dto.notification.Notification;
+import bohdan.markatov.org.dto.notification.NotificationStatus;
 import bohdan.markatov.org.dto.task.CreateTaskRequestDto;
 import bohdan.markatov.org.dto.task.TaskResponseDto;
 import bohdan.markatov.org.exception.EntityNotFoundException;
@@ -8,6 +10,7 @@ import bohdan.markatov.org.model.Project;
 import bohdan.markatov.org.model.Task;
 import bohdan.markatov.org.model.User;
 import bohdan.markatov.org.repository.TaskRepository;
+import bohdan.markatov.org.service.notification.NotificationService;
 import bohdan.markatov.org.service.project.ProjectService;
 import bohdan.markatov.org.service.user.UserService;
 import java.util.List;
@@ -19,6 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 public class TaskServiceImpl implements TaskService {
+    private final NotificationService notificationService;
     private final TaskRepository taskRepository;
     private final ProjectService projectService;
     private final UserService userService;
@@ -35,6 +39,12 @@ public class TaskServiceImpl implements TaskService {
         }
         task.setProject(project);
         task.setResponsibleUser(user);
+        notificationService.sendNotification(user.getEmail(),
+                Notification.builder()
+                        .status(NotificationStatus.ADDED)
+                        .message("You have been assigned a new task for project "
+                                + project.getName())
+                        .build());
         return taskMapper.toDto(taskRepository.save(task));
     }
 
@@ -70,6 +80,18 @@ public class TaskServiceImpl implements TaskService {
         Project project = task.getProject();
         if (projectService.isUserInProject(user, project.getId())) {
             task.setStatus(status);
+            if (status == Task.Status.COMPLETED) {
+                notificationService.sendNotification(project.getManager().getEmail(),
+                        Notification.builder()
+                                .status(NotificationStatus.INFO)
+                                .message("User "
+                                        + task.getResponsibleUser().getFirstname()
+                                        + " "
+                                        + task.getResponsibleUser().getLastname()
+                                        + " has completed task "
+                                        + task.getName())
+                                .build());
+            }
             return taskMapper.toDto(taskRepository.save(task));
         }
         throw new EntityNotFoundException("Can't find task by id: " + taskId);

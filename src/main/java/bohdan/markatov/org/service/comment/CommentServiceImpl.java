@@ -1,12 +1,15 @@
 package bohdan.markatov.org.service.comment;
 
 import bohdan.markatov.org.dto.comment.CommentResponseDto;
+import bohdan.markatov.org.dto.notification.Notification;
+import bohdan.markatov.org.dto.notification.NotificationStatus;
 import bohdan.markatov.org.exception.EntityNotFoundException;
 import bohdan.markatov.org.mapper.CommentMapper;
 import bohdan.markatov.org.model.Comment;
 import bohdan.markatov.org.model.Task;
 import bohdan.markatov.org.model.User;
 import bohdan.markatov.org.repository.CommentRepository;
+import bohdan.markatov.org.service.notification.NotificationService;
 import bohdan.markatov.org.service.task.TaskService;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -17,6 +20,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class CommentServiceImpl implements CommentService {
+    private final NotificationService notificationService;
     private final CommentRepository commentRepository;
     private final CommentMapper commentMapper;
     private final TaskService taskService;
@@ -29,6 +33,14 @@ public class CommentServiceImpl implements CommentService {
         comment.setAuthor(author);
         comment.setTask(task);
         comment.setPublicationDate(LocalDateTime.now());
+        notificationService.sendNotification(task.getResponsibleUser().getEmail(),
+                Notification.builder()
+                        .status(NotificationStatus.INFO)
+                        .message("User "
+                                + author.getFirstname()
+                                + " " + author.getLastname()
+                                + " left a comment under your task")
+                        .build());
         return commentMapper.toDto(commentRepository.save(comment));
     }
 

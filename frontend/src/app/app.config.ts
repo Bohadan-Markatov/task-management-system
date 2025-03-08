@@ -11,6 +11,7 @@ import {TaskCardComponent} from "./modules/task/components/task-component/task-c
 import {TaskListComponent} from "./modules/task/pages/task-list/task-list.component";
 import {AttachmentComponent} from "./modules/task/components/attachment/attachment.component";
 import {CreateTaskComponent} from "./modules/task/components/create-task/create-task.component";
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,14 @@ import {CreateTaskComponent} from "./modules/task/components/create-task/create-
         HttpClientModule,
         FormsModule,
         AttachmentComponent,
+        ToastrModule.forRoot({
+          progressBar: true,
+          closeButton: true,
+          newestOnTop: true,
+          tapToDismiss: true,
+          positionClass: "toast-bottom-right",
+          timeOut: 8000
+        })
     ],
   providers: [
     HttpClient,
