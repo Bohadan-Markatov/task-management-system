@@ -17,11 +17,12 @@ while the frontend is developed using Angular with Bootstrap for styling.
 ### Project architecture diagram
 ![](images/DIAGRAM.png)
 ## Features
-* User Registration: Users can register for a new account.
-* Email Validation: Accounts are activated using secure email validation token.
-* User Authentication: Existing users can log in to their accounts using their email and password or via Google OAuth2.
-* Project Management: Users can create projects, add and delete other users in the team, create tasks for team members, and retrieve all tasks by project. Team members can quit a project.
-* Task Management: The project manager and responsible users can update the status of tasks, add comments, attach files, and delete tasks.
+### Users can create a new account with email verification and log in using their email and password.
+![](images/RL.gif)
+### Both new and existing users can log in using their Google accounts via OAuth2 authentication.
+![](images/OAuth2.gif)
+### Project Management: Users can create projects, add and delete other users in the team, create tasks for team members, and retrieve all tasks by project. Team members can quit a project.
+### Task Management: The project manager and responsible users can update the status of tasks, add comments, attach files, and delete tasks.
 ## Technologies Used
 ### Backend
 ![Static Badge](https://img.shields.io/badge/Spring%20Boot%203-brightgreen?style=plastic&logo=spring&logoColor=white)
