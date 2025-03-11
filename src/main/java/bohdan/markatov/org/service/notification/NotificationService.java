@@ -13,7 +13,6 @@ public class NotificationService {
     private final SimpMessagingTemplate messagingTemplate;
 
     public void sendNotification(String userEmail, Notification notification) {
-        log.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!Sending notification to user {}", userEmail);
         messagingTemplate.convertAndSendToUser(userEmail, "/notifications", notification);
     }
 }

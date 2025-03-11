@@ -49,3 +49,18 @@ services:
          }'
     env_file:
       - .env
+
+  frontend:
+    container_name: frontendcontainer
+    build: ./frontend
+    image: frontend:v1
+    ports:
+      - 80:80
+    networks:
+      - internalnet
+
+
+networks:
+  internalnet:
+    driver: bridge
+

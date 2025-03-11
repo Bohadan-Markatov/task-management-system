@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\config\ApplicationContextHolder.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\config\MapperConfig.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\config\SecurityConfig.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\config\WebsocketConfig.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\controller\AttachmentController.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\controller\AuthenticationController.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\controller\CommentController.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\controller\ProjectController.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\controller\TaskController.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\attachment\AttachmentResponseDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\comment\CommentRequestDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\comment\CommentResponseDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\exception\ResponseErrorDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\notification\Notification.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\notification\NotificationStatus.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\project\AddTeamMemberRequestDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\project\CreateProjectRequestDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\project\ProjectResponseDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\task\CreateTaskRequestDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\task\TaskResponseDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\task\UpdateTaskStatusRequestDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\user\UserLoginRequestDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\user\UserLoginResponseDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\user\UserRegistrationRequestDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\dto\user\UserResponseDto.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\exception\EntityNotFoundException.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\exception\handler\CustomGlobalExceptionHandler.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\exception\NotUniqueValueException.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\exception\RegistrationException.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\mapper\AttachmentMapper.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\mapper\CommentMapper.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\mapper\ProjectMapper.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\mapper\TaskMapper.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\mapper\UserMapper.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\model\Attachment.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\model\Comment.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\model\EmailVerificationToken.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\model\Project.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\model\Role.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\model\Task.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\model\User.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\repository\AttachmentRepository.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\repository\CommentRepository.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\repository\ProjectRepository.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\repository\RoleRepository.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\repository\TaskRepository.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\repository\UserRepository.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\repository\VerificationTokenRepository.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\security\CustomUserDetailsService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\security\JwtAuthenticationFilter.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\security\OnRegistrationCompleteEvent.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\security\RegistrationListener.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\attachment\AttachmentService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\attachment\AttachmentServiceImpl.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\auth\AuthenticationService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\auth\AuthenticationServiceImpl.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\comment\CommentService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\comment\CommentServiceImpl.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\dropbox\DropboxService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\dropbox\DropboxServiceImpl.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\notification\NotificationService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\project\ProjectService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\project\ProjectServiceImp.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\task\TaskService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\task\TaskServiceImpl.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\user\UserService.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\service\user\UserServiceImpl.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\TaskManagementApplication.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\util\jwt\JwtUtil.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\util\validation\FieldMatch.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\java\bohdan\markatov\org\util\validation\FieldMatchValidator.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\test\java\bohdan\markatov\org\TaskManagementApplicationTests.java">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\main\resources\application.properties">
+</file>
+<file name="C:\Users\javat\IdeaProjects\task-management-system\src\test\resources\application.properties">
+</file>
+</checkstyle>
