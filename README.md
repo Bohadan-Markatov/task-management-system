@@ -24,23 +24,23 @@ while the frontend is developed using Angular with Bootstrap for styling.
 * Task Management: The project manager and responsible users can update the status of tasks, add comments, attach files, and delete tasks.
 ## Technologies Used
 ### Backend
-* Spring Boot 3
-* Spring Security 6
-* JWT Token Authentication
-* Spring Data JPA
-* JSR-303 and Spring Validation
-* OpenAPI and Swagger UI Documentation
-* Liquibase: Manages database migrations
-* Docker
-* Google API
-* Dropbox API
+![Static Badge](https://img.shields.io/badge/Spring%20Boot%203-brightgreen?style=plastic&logo=spring&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Spring%20Security%206-blue?style=plastic&logo=springsecurity&logoColor=white)
+![Static Badge](https://img.shields.io/badge/JSON%20Web%20Token%20Authentication-red?style=plastic&logo=jsonwebtokens&logoColor=white)
+![Static Badge](https://img.shields.io/badge/MySQL%20%26%20Spring%20Data%20JPA-yellow?style=plastic&logo=mysql&logoColor=white)
+![Static Badge](https://img.shields.io/badge/WebSocket%20API-silver?style=plastic&logo=socket&logoColor=black)
+![Static Badge](https://img.shields.io/badge/Swagger%20%26%20OpenAPI-green?style=plastic&logo=swagger&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Liquidbase-blue?style=plastic&logo=liquibase&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Docker-darkblue?style=plastic&logo=docker&logoColor=white)
+![Static Badge](https://img.shields.io/badge/OAuth%202.0-gold?style=plastic&logo=webauthn&logoColor=black)
+![Static Badge](https://img.shields.io/badge/Gmail%20API-blueviolet?style=plastic&logo=gmail&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Dropbox%20API-%230061FF?style=plastic&logo=dropbox&logoColor=white)
 ### Frontend
-* Angular
-* Component-Based Architecture
-* Lazy Loading
-* Authentication Guard
-* OpenAPI Generator for Angular
-* Bootstrap
+![Static Badge](https://img.shields.io/badge/Angular-red?style=plastic&logo=angular&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Bootstrap-%2305054B?style=plastic&logo=bootstrap&logoColor=white)
+![Static Badge](https://img.shields.io/badge/NGINX-%23009639?style=plastic&logo=nginx&logoColor=white)
+![Static Badge](https://img.shields.io/badge/Font%20Awesome-%23538DD7?style=plastic&logo=fontawesome&logoColor=white)
+
 ## Installation
 ### With Docker
 1. Download this project.
