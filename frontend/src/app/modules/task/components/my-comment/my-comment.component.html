@@ -1,0 +1,32 @@
+<div class="container-fluid my-comment-container">
+  <div class="comment-header">
+    <div class="author-info">
+      <span class="author-name">{{ comment.author?.firstname }} {{ comment.author?.lastname }}</span>
+      <span class="author-email">({{ comment.author?.email }})</span>
+    </div>
+    <button class="delete-button" (click)="delete()">
+      <i class="fa-solid fa-times"></i>
+    </button>
+  </div>
+  <hr style="margin: 10px 0;">
+  <div class="alert alert-danger" style="max-height: 75px; padding: 5px" role="alert" *ngIf="errorMsg.length">
+    <p *ngFor="let msg of errorMsg" style="margin: 0">{{msg}}</p>
+  </div>
+  <div class="comment-body">
+    <p *ngIf="!isEditMode">{{ comment.text }}</p>
+    <div *ngIf="isEditMode" class="edit-mode">
+      <textarea [(ngModel)]="editedText">{{ comment.text }}</textarea>
+      <button class="check-button" (click)="saveEdit()">
+        <i class="fa-solid fa-check"></i>
+      </button>
+    </div>
+  </div>
+  <hr style="margin: 10px 0;">
+  <div class="comment-footer">
+    <button class="edit-button" (click)="toggleEditMode()">
+      <i class="fa-solid fa-pencil"></i>
+    </button>
+    <span *ngIf="comment.changed">(edited)</span>
+    <span>{{ comment.publicationDate }}</span>
+  </div>
+</div>

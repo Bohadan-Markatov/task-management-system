@@ -1,0 +1,93 @@
+.my-comment-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #C0C0C0;
+  border-radius: 1rem;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: bold;
+}
+
+.comment-body {
+  flex: 1;
+  margin-bottom: -20px;
+  margin-top: -10px;
+}
+
+.comment-footer {
+  margin-top: -5px;
+  margin-bottom: -7px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.comment-footer span {
+  margin-left: 10px;
+}
+
+.delete-button,
+.edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #C0C0C0;
+}
+
+.check-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #C0C0C0;
+  font-size: 21px;
+}
+
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  color: #C0C0C0;
+}
+
+.edit-mode textarea {
+  width: 100%;
+  resize: vertical;
+  margin-bottom: 10px;
+  background-color: #C0C0C0;
+}
+
+.edit-mode button {
+  align-self: flex-end;
+}
+
+.edit-button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 15px;
+}
+
+.delete-button {
+  font-size: 21px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 5px;
+  padding-right: 10px;
+}

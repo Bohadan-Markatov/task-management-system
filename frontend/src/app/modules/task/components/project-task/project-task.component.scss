@@ -1,0 +1,136 @@
+.select {
+  height: 23px;
+}
+
+.btn-upload {
+  margin-bottom: 0.3rem;
+  border: 1px solid rgba(192, 192, 192, 0.5);
+  border-radius: 1rem;
+  color: #C0C0C0;
+}
+
+.btn-comment {
+  margin-bottom: 0.3rem;
+  border: 1px solid rgba(192, 192, 192, 0.5);
+  border-radius: 1rem;
+  color: #C0C0C0;
+}
+
+.task-card, .task-project {
+  margin-bottom: 7px;
+  border: 1px solid rgba(192, 192, 192, 0.5);
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  background-color: rgba(80, 80, 80, 0.7);
+  color: #C0C0C0;
+  position: relative;
+}
+
+.btn-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #C0C0C0;
+  background-color: transparent;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 23px;
+}
+
+
+.btn-delete:hover {
+  color: #C0C0C0;
+}
+
+
+.task-project .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.task-project .fa-sign-out-alt {
+  justify-content: center;
+  text-align: center;
+}
+
+.task-card .card-body,
+.task-project .card-body {
+  padding: 1rem;
+  flex: 1;
+}
+
+.task-card select {
+  background-color: #505050;
+  color: #C0C0C0;
+  border-radius: 0.5rem;
+  padding: 0.01rem;
+  width: 125px;
+  height: 23px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.task-card select option {
+  background-color: #505050;
+  color: #C0C0C0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.task-card .btn-project {
+  background-color: transparent;
+  color: #C0C0C0;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: -6px;
+}
+
+.task-project {
+  background-color: #1E1E1E;
+}
+
+::ng-deep .custom-modal-class .modal-content {
+  background-color: #505050;
+  color: #C0C0C0;
+  border-radius: 1rem;
+  height: fit-content;
+  width: 475px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  padding: 0.75rem;
+}
+
+::ng-deep .btn-delete .fa-times {
+  color: #C0C0C0;
+  border: none;
+}
+
+::ng-deep .btn-delete .fa-sign-out-alt {
+  color: #C0C0C0;
+  border: none;
+  position: absolute;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: auto;
+}
+
+::ng-deep .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  text-align: center;
+}
+

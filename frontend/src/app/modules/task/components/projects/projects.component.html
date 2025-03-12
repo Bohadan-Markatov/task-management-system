@@ -1,0 +1,32 @@
+<div class="container-fluid project-card">
+  <div class="project-body">
+    <strong>Name:</strong> {{ project.name }} <br>
+    <strong>Description:</strong> {{ project.description }} <br>
+  </div>
+  <hr class="custom-hr">
+  <div class="custom-scrollbar">
+    <div *ngFor="let a of project.teamMembers" class="members">
+      <app-team-member [user]="a" [projectId]="project.id" (userDeleted)="onUserDeleted($event)"></app-team-member>
+    </div>
+  </div>
+  <hr class="custom-hr">
+  <div class="alert alert-danger" style="max-height: 75px; padding: 5px" role="alert" *ngIf="errorMsg.length">
+    <p *ngFor="let msg of errorMsg" style="margin: 0">{{msg}}</p>
+  </div>
+  <div class="input-group" style="display: flex; align-items: center; width: 100%">
+    <input [(ngModel)]="teamMemberEmail" type="text" class="form-control" id="comment" placeholder="   name@example.com"
+           style="border-radius: 1rem 1rem 1rem 1rem; margin-right: 1px; flex: 5; border: 1px solid #C0C0C0; padding: 1px;">
+    <button (click)="addTeamMember()" type="button" class="btn btn-add-user"
+            style="border-radius: 1rem 1rem 1rem 1rem; flex: 1 auto; border: none; padding: 1px;">
+      <i class="fa-solid fa-user-plus"></i>
+    </button>
+  </div>
+  <div style="display: flex; align-items: center; width: 100%;">
+    <button class="btn show-all-task" (click)="allTasks()" style="flex: 1; margin-left: 1px;">
+      <i class="fa-solid far fa-tasks"></i>
+    </button>
+  </div>
+  <button class="btn btn-delete" type="button" (click)="delete()">
+    <i class="fa-solid fas fa-times"></i>
+  </button>
+</div>
