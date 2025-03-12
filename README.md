@@ -46,6 +46,7 @@ while the frontend is developed using Angular with Bootstrap for styling.
 
 ## Installation
 ### With Docker
+![](images/DP.gif)
 1. Download this project.
 2. Create a new file named `.env` in the root directory of this project.
 3. Copy all data from this [file](https://drive.google.com/file/d/1BMgBb2hqjRVglaZo6E9Ob4sNM-SuGKB8/view?usp=sharing) and paste it into the new `.env` file.
