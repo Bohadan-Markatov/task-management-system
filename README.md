@@ -22,7 +22,9 @@ while the frontend is developed using Angular with Bootstrap for styling.
 ### Both new and existing users can log in using their Google accounts via OAuth2 authentication.
 ![](images/OAuth2.gif)
 ### Project Management: Users can create projects, add and delete other users in the team, create tasks for team members, and retrieve all tasks by project. Team members can quit a project.
+![](images/PM.gif)
 ### Task Management: The project manager and responsible users can update the status of tasks, add comments, attach files, and delete tasks.
+![](images/TM.gif)
 ## Technologies Used
 ### Backend
 ![Static Badge](https://img.shields.io/badge/Spring%20Boot%203-brightgreen?style=plastic&logo=spring&logoColor=white)
@@ -52,12 +54,7 @@ while the frontend is developed using Angular with Bootstrap for styling.
 mvn clean package
 docker-compose up --build
 ```
-5. Once the backend and database are up and running, open a new terminal window, navigate to the root of the project, then to the folder named `frontend`, and run the following command:
-```
-docker-compose up --build
-```
-6. Once the frontend container is launched, the application will be available in your browser on port 80.
-7. To start using the application, paste the following URL into the browser search bar:
+5. To start using the application, paste the following URL into the browser search bar:
 ```
 http://localhost:80/login
 ```
